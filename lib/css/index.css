@@ -1,0 +1,85 @@
+nav#nav-module ul.nav-row {
+  background: #fff;
+  width: 100%;
+}
+nav#nav-module ul.nav-row li {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+nav#nav-module ul.nav-row li a {
+  display: inline-block;
+  word-wrap: break-word;
+  text-align: center;
+  padding: 10px 0;
+}
+nav#nav-module ul.nav-row li img {
+  width: 100%;
+  max-width: 50px;
+}
+nav#nav-module ul.nav-row li span {
+  display: block;
+  line-height: 24px;
+}
+nav#nav-module ul.nav-row.nav-hidden {
+  display: none;
+}
+main {
+  background: #f2f2f2;
+}
+main .ware {
+  max-width: 980px;
+  background: #fff;
+  position: relative;
+  margin: 0 auto;
+}
+main .ware > li {
+  position: relative;
+  height: 120px;
+  padding: 10px 5px;
+  border-bottom: 1px solid #f1f1f1;
+}
+main .ware a {
+  width: 100%;
+  display: block;
+  height: 100px;
+}
+main .ware a > img {
+  max-width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  margin-top: -50px;
+  top: 50%;
+}
+main .ware .waretext {
+  padding-left: 100px;
+  color: #333333;
+}
+main .ware .ware-detail {
+  word-break: break-all;
+  font-size: 15px;
+  line-height: 19px;
+  min-height: 57px;
+}
+main .ware .ware-detail strong {
+  color: #ff6c00;
+  font-weight: 400;
+}
+main .ware .other {
+  font-size: 12px;
+  color: #a1a1a1;
+}
+main .ware .ware-comment {
+  margin-right: 10px;
+  position: relative;
+}
+main .ware .ware-comment::before {
+  content: '';
+  position: absolute;
+  left: -16px;
+  top: 4px;
+  width: 14px;
+  height: 15px;
+  background: url(../../images/comment.png) no-repeat;
+}

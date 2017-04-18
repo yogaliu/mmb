@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>慢慢买比价网-手机版</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-itunes-app" content="app-id=933106331">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="lib/css/base.css">
+    <link rel="stylesheet" type="text/css" href="lib/css/common.css">
+    <link rel="stylesheet" type="text/css" href="lib/css/category.css">
+</head>
+<header>
+    <div class="fl logo">
+        <h1>慢慢买</h1>
+        <a href="index.html">
+            <img src="images/header_logo.png">
+        </a>
+    </div>
+    <div class="fr download">
+        <a href="index.html">
+            <img src="images/header_app.png">
+        </a>
+    </div>
+</header>
+<form class="seacher">
+    <div>
+        <input type="text" placeholder="请输入你想比价的商品" maxlength="30"></input>
+        <button>搜索</button>
+    </div>
+</form>
+<main>
+    <div class="category-box">
+        <ul id="category-box">
+
+        </ul>
+    </div>
+</main>
+<footer>
+    <div class="register">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#" id="back-top">返回顶部</a>
+    </div>
+    <section class="footer-mes">
+        <p><a href="#">手机app下载</a>慢慢买手机版 -- 掌上比价平台</p>
+        <p>
+            m.manmanbuy.com
+        </p>
+    </section>
+</footer>
+</body>
+<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="lib/html5shiv/html5shiv.min.js"></script>
+<script type="text/javascript" src="lib/respond/respond.js"></script>
+<script type="text/javascript" src="lib/template/template.js"></script>
+<script type="text/javascript" src="lib/js/category.js"></script>
+<script type="text/html" id="category-title">
+    {{ each result as value i }}
+    <li data-title-id="{{ value.titleId }}">
+        <a class="category-title">
+                {{ value.title }}
+                </a>
+        <div class="category-data-box">
+
+        </div>
+    </li>
+    {{ /each }}
+
+</script>
+
+</html>
+<script type="text/html" id="category-data">
+    <table class="category-data">
+        {{ each result as value i }} {{ if i%3==0 }}
+        <tr>{{ /if }}
+            <td><a href="productlist.html?categoryId={{ value.categoryId }}">{{ value.category }}</a></td>
+            {{ if i%3==2 }}</tr>{{ /if }} {{ /each }}
+    </table>
+</script>

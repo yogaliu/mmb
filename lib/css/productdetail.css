@@ -1,0 +1,82 @@
+main .comment {
+  position: relative;
+}
+main .comment .nav {
+  margin: 10px 0;
+}
+main .comment .nav li {
+  float: left;
+  width: 33.333%;
+  text-align: center;
+  background: #ffbb00;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffd050), to(#ffbb00));
+  border: 1px solid #c14d00;
+  border-left: none;
+  height: 34px;
+  line-height: 34px;
+  position: relative;
+}
+main .comment .nav li.action {
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffa632), to(#ff9000));
+}
+main .comment .nav li a {
+  color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+main .comment .nav li:last-child {
+  border-right: none;
+}
+main .comment .red {
+  color: #d10311;
+}
+main .comment .title-img {
+  text-align: center;
+}
+main .comment .title-img img {
+  width: 160px;
+  margin: 10px 0;
+}
+main .comment .title-img h2 {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+main .comment .collect {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: green;
+  right: 20px;
+  top: 150px;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+}
+main .comment .comment-main h3 {
+  line-height: 30px;
+  font-size: 16px;
+  text-align: center;
+  background: #ccc;
+}
+main .comment .comment-main > ul {
+  background: #fff;
+}
+main .comment .comment-main > ul li {
+  border-bottom: 1px solid #ccc;
+}
+main .comment .comment-main > ul li .comment-mes {
+  padding: 2px;
+  font-size: 12px;
+  color: #ccc;
+}
+main .comment .comment-main > ul li .comment-text {
+  padding: 5px;
+  display: block;
+  overflow: hidden;
+  margin: 0 auto;
+  font-size: 12px;
+}

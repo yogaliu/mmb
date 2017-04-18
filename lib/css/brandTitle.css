@@ -1,0 +1,42 @@
+main {
+  background-color: #fff;
+  overflow: hidden;
+}
+main h2 {
+  font-size: 16px;
+  background: #eee;
+  line-height: 30px;
+  margin: 5px 2px;
+  border: 1px solid #ccc;
+  color: #874604;
+  padding-left: 15px;
+}
+main .nav-title {
+  margin-bottom: 20px;
+  border-top: 1px solid #ddd;
+  border-radius: 4px;
+}
+main .nav-title li {
+  background: #eee;
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+main .nav-title li a {
+  padding-left: 15px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  font-weight: 700;
+}
+main .nav-title li i {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  margin-top: -10px;
+}

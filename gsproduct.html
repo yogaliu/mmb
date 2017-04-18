@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>慢慢买比价网-手机版</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-itunes-app" content="app-id=933106331">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/css/base.css">
+    <link rel="stylesheet" type="text/css" href="lib/css/common.css">
+    <link rel="stylesheet" type="text/css" href="lib/css/gsproduct.css">
+</head>
+
+<body>
+    <div class="header container-fluid">
+        <div class="row">
+            <a href="index.html" class="col-xs-2 back-index glyphicon glyphicon-menu-left">
+            </a>
+            <h2 class="col-xs-8">凑单品</h2>
+            <a href="index.html" class="col-xs-2 download"><img src="images/header_app.png" alt=""></a>
+        </div>
+    </div>
+    <div class="nav-drop">
+        <div><span>京东</span><i class="glyphicon glyphicon-triangle-bottom"></i>
+            <ul class="city">
+
+            </ul>
+        </div>
+        <div><span>华北</span><i class="glyphicon glyphicon-triangle-bottom"></i>
+            <ul class="rigion">
+            </ul>
+        </div>
+        <div>1元<i class="glyphicon glyphicon-triangle-bottom"></i>
+            <ul class="price">
+                <li>1</li>
+                <li>100</li>
+                <li>1000</li>
+            </ul>
+        </div>
+        <a href="javascript:;"><i class="glyphicon glyphicon-search"></i></a>
+    </div>
+    <main>
+        <ul class="product-detail clearfix">
+
+
+        </ul>
+    </main>
+    <footer>
+        <div class="register">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a href="#" id="back-top">返回顶部</a>
+        </div>
+        <section class="footer-mes">
+            <p><a href="#">手机app下载</a>慢慢买手机版 -- 掌上比价平台</p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </section>
+    </footer>
+</body>
+<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="lib/html5shiv/html5shiv.min.js"></script>
+<script type="text/javascript" src="lib/respond/respond.js"></script>
+<script type="text/javascript" src="lib/template/template.js"></script>
+<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="lib/js/gsproduct.js"></script>
+<script type="text/html" id="city-drop">
+    {{ each result as value i }}
+    <li data-shopid="{{value.shopId}}">{{value.shopName}}</li>
+    {{ /each }}
+</script>
+<script type="text/html" id="nav-drop">
+    {{ each result as value i }}
+    <li data-shopid="{{value.shopId}}">{{value.shopName}}</li>
+    {{ /each }}
+</script>
+<script type="text/html" id="rigion-drop">
+    {{ each result as value i }}
+    <li data-areaid="{{value.areaId}}">{{value.areaName}}</li>
+    {{ /each }}
+</script>
+<script type="text/html" id="product-detail">
+    {{ each result as value i }}
+    <li>
+        <div>
+            <div class="product-img">
+                <img src="{{value.productImg}}" alt="">
+            </div>
+            <p class="product-name">{{value.productName}}</p>
+            <p class="product-price">
+                <em>{{value.productPrice.substr(0,1)}}</em> {{value.productPrice.slice(1)}}
+            </p>
+            <a href="javascript:;" class="toBuy">去凑单</a>
+        </div>
+    </li>
+    {{ /each }}
+
+</script>
+
+</html>

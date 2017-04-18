@@ -1,0 +1,90 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>慢慢买比价网-手机版</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-itunes-app" content="app-id=933106331">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/css/base.css">
+    <link rel="stylesheet" type="text/css" href="lib/css/common.css">
+    <link rel="stylesheet" type="text/css" href="lib/css/couponproduct.css">
+</head>
+
+<body>
+    <div class="mask">
+        <a href="javascript:;" class="prev glyphicon glyphicon-menu-left
+"></a>
+        <span><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg" alt=""></span>
+
+        <a href="javascript:;" class="next glyphicon glyphicon-menu-right"></a>
+    </div>
+    <div class="header red container-fluid">
+        <div class="row">
+            <a href="index.html" class="col-xs-2 back-index glyphicon glyphicon-menu-left">
+            </a>
+            <h2 class="col-xs-8">肯德基优惠券</h2>
+            <a href="index.html" class="col-xs-2 download"><img src="images/header_app.png" alt=""></a>
+        </div>
+    </div>
+
+    <main>
+        <h3 class="ad-title text-center">
+            --点餐前出示手机中的优惠券,即可享受优惠--
+        </h3>
+        <div class="product-box">
+
+        </div>
+        <div class="crumbs">
+            <a href="index.html">首页</a> >
+            <a href="coupon.html">优惠券</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="register">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a href="#" id="back-top">返回顶部</a>
+        </div>
+        <section class="footer-mes">
+            <p><a href="#">手机app下载</a>慢慢买手机版 -- 掌上比价平台</p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </section>
+    </footer>
+</body>
+<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="lib/html5shiv/html5shiv.min.js"></script>
+<script type="text/javascript" src="lib/respond/respond.js"></script>
+<script type="text/javascript" src="lib/template/template.js"></script>
+<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="lib/js/couponproduct.js"></script>
+<script type="text/html" id="product-box">
+
+    <ul>
+        {{ each result as value i}}
+        <li class="clearfix">
+            <div class="fl">
+                {{# value.couponProductImg}}
+            </div>
+            <div class="productname">
+                {{ value.couponProductName }}
+            </div>
+            <p class="price">{{ value.couponProductPrice }}</p>
+            <p class="time">{{ value.couponProductTime }}</p>
+            <i class="glyphicon glyphicon-menu-right
+"></i>
+        </li>
+        {{ /each }}
+    </ul>
+
+</script>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>慢慢买比价网-手机版</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-itunes-app" content="app-id=933106331">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/css/base.css">
+    <link rel="stylesheet" type="text/css" href="lib/css/common.css">
+    <link rel="stylesheet" type="text/css" href="lib/css/moneyctrlproduct.css">
+</head>
+
+<body>
+    <div class="header container-fluid">
+        <div class="row">
+            <a href="moneyctrl.html" class="col-xs-2 back-index glyphicon glyphicon-menu-left">
+            </a>
+            <h2 class="col-xs-8">国内折扣</h2>
+            <a href="index.html" class="col-xs-2 download"><img src="images/header_app.png" alt=""></a>
+        </div>
+    </div>
+    <main>
+        <div class="discount-detail">
+
+        </div>
+        <div class="discount-city">
+
+        </div>
+        <div class="toBuy">
+            <a href="#">
+                <i class="glyphicon glyphicon-shopping-cart"></i> 前往购买
+            </a>
+        </div>
+        <div class="discount-comment">
+        </div>
+    </main>
+    <footer>
+        <div class="register">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a href="#" id="back-top">返回顶部</a>
+        </div>
+        <section class="footer-mes">
+            <p><a href="#">手机app下载</a>慢慢买手机版 -- 掌上比价平台</p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </section>
+    </footer>
+</body>
+<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="lib/html5shiv/html5shiv.min.js"></script>
+<script type="text/javascript" src="lib/respond/respond.js"></script>
+<script type="text/javascript" src="lib/template/template.js"></script>
+<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="lib/js/moneyctrlproduct.js"></script>
+<script type="text/html" id="discount-detail">
+    <h3>{{result[0].productName}}</h3>
+    <div class="info">
+        <span>{{result[0].productFrom}}</span>
+        <span>{{result[0].productTime}}</span>
+        <span>{{result[0].productTips}}</span>
+    </div>
+    <div class="clearfix">
+        {{#result[0].productImgSm}}
+
+        <p>
+            {{result[0].productInfo||result[0].productInfo2}}
+        </p>
+        <p>
+            {{result[0].productInfo1}}
+        </p>
+        {{#result[0].productImgLg}}
+    </div>
+</script>
+
+<script type="text/html" id="discount-city">
+    {{#result[0].productCity}}
+</script>
+
+<script type="text/html" id="discount-comment">
+    {{#result[0].productComment}}
+
+</script>
+
+</html>

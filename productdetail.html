@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>慢慢买比价网-手机版</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-itunes-app" content="app-id=933106331">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="lib/css/base.css">
+    <link rel="stylesheet" type="text/css" href="lib/css/common.css">
+    <link rel="stylesheet" type="text/css" href="lib/css/productdetail.css">
+</head>
+
+<body>
+    <header>
+        <div class="fl logo">
+            <h1>慢慢买</h1>
+            <a href="index.html">
+                <img src="images/header_logo.png">
+            </a>
+        </div>
+        <div class="fr download">
+            <a href="index.html">
+                <img src="images/header_app.png">
+            </a>
+        </div>
+    </header>
+    <form class="seacher">
+        <div>
+            <input type="text" placeholder="请输入你想比价的商品" maxlength="30"></input>
+            <button>搜索</button>
+        </div>
+    </form>
+    <div class="crumbs">
+
+    </div>
+    <main>
+        <div class="comment">
+            <div class="title-img">
+            </div>
+            <a href="#" class="collect">收藏</a>
+            <ul class="nav clearfix">
+                <li class="action">
+                    <a href="#">比较购买</a>
+                </li>
+                <li>
+                    <a href="#">产品参数</a>
+                </li>
+                <li>
+                    <a href="#">评价(1511)</a>
+                </li>
+            </ul>
+            <div class="price"></div>
+            <div class="comment-main">
+                <h3> 网友评价 </h3>
+                <ul>
+
+                </ul>
+            </div>
+        </div>
+    </main>
+    <div class="more-btn">
+        <a href="#">
+                更多评价&raquo;
+            </a>
+    </div>
+    <footer>
+        <div class="register">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a href="#" id="back-top">返回顶部</a>
+        </div>
+        <section class="footer-mes">
+            <p><a href="#">手机app下载</a>慢慢买手机版 -- 掌上比价平台</p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </section>
+    </footer>
+</body>
+<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="lib/html5shiv/html5shiv.min.js"></script>
+<script type="text/javascript" src="lib/respond/respond.js"></script>
+<script type="text/javascript" src="lib/template/template.js"></script>
+<script type="text/javascript" src="lib/js/productdetail.js"></script>
+<script type="text/html" id="crumbs">
+    {{ each result as value i }}
+    <a href="index.html">首页</a>>
+    <a href="productlist.html?categoryId={{value.categoryId}}" class="toCategory">
+    0</a>>
+    <a href="#">{{value.productName.split(" ")[0]}}</a> {{ /each }}
+</script>
+<script type="text/html" id="comment">
+    {{ each result as value i }}
+    <li class="clearfix">
+        <div class="clearfix comment-mes">
+            <div class="fl"><span class="comment-name ">{{ value.comName }}</span>
+            </div>
+            <div class="fr">
+                <p class="comment-date">{{ value.comTime }}</p>
+                <p class="get-from">{{ value.comFrom }}</p>
+            </div>
+        </div>
+        <p class="comment-text">
+            {{ value.comContent }}
+        </p>
+    </li>
+    {{ /each }}
+</script>
+<script type="text/html" id="title-img">
+    <h2>{{result[0].productName}}</h2>
+    <div class="product-img">{{# result[0].productImg}}</div>
+</script>
+<script type="text/html" id="detail-nav">
+    {{# result[0].bjShop}}
+</script>
+
+</html>
